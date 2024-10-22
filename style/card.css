@@ -1,0 +1,90 @@
+main {
+  width: max-content;
+  height: max-content;
+  margin: 5%;
+  display: flex;
+  flex-flow: column;
+  justify-self: center;
+}
+main .New .Title, main .Top .Title {
+  display: flex;
+  align-items: flex-end;
+  gap: 1%;
+  justify-content: center;
+}
+main .New .Title h1, main .Top .Title h1 {
+  padding-bottom: 1%;
+  width: 100%;
+  height: 20px;
+  line-height: 1%;
+  font-family: "PIXY";
+  color: #ffffff;
+  border-bottom: 1px solid white;
+}
+main .New .Title .funcBtn, main .Top .Title .funcBtn {
+  float: left;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 20%;
+}
+main .New .Title .funcBtn .btn, main .Top .Title .funcBtn .btn {
+  padding-top: 10%;
+  width: 30px;
+  height: 30px;
+  border: none;
+  color: #ffffff;
+  background-color: transparent;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+main .New .Title .funcBtn .btn:hover, main .Top .Title .funcBtn .btn:hover {
+  color: red;
+}
+main .New .containerForGame, main .Top .containerForGame {
+  width: 20%;
+  display: flex;
+  gap: 2.5%;
+  line-height: 1%;
+}
+main .New .containerForGame .cards, main .Top .containerForGame .cards {
+  font-family: "PIXY";
+}
+main .New .containerForGame .cards .card, main .Top .containerForGame .cards .card {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 150px;
+  background-color: white;
+}
+main .New .containerForGame .cards h2, main .Top .containerForGame .cards h2 {
+  color: white;
+  font-size: 20px;
+}
+main .New .containerForGame .cards .GameScore, main .Top .containerForGame .cards .GameScore {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  gap: 2%;
+  margin-bottom: 20%;
+}
+main .New .containerForGame .cards .GameScore #Score, main .Top .containerForGame .cards .GameScore #Score {
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background-color: green;
+}
+main .New .containerForGame .cards .GameScore #review, main .Top .containerForGame .cards .GameScore #review {
+  color: #ffffff;
+}
+
+/*# sourceMappingURL=card.css.map */

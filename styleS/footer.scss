@@ -1,0 +1,73 @@
+footer{
+    display: grid;
+    width: 100%;
+    height: max-content;
+    justify-content: center;
+    text-align: center;
+    border-top: 1px solid #ffffff50;
+    font-family: 'PIXY';
+    background-color: rgba(0, 0, 0, 0.9);
+    filter: blur(10%);
+    h2{
+        color: #ffffff;
+        margin: 5%;
+    }
+    .logo{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        .name{
+            color: rgb(255, 255, 255);
+            font-family: 'PIXY';
+            font-size: 30px;
+            transition: color 0.2s;
+        }
+        .name:hover{
+            color: rgb(255, 0, 0);
+        }
+        img{
+            width: 50px;
+            height: 50px;
+        }
+    }
+    .containerForInfo{
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        gap: 15%;   
+        width: auto;
+        margin-bottom: 5%;
+        line-height: 100%;
+        h2{
+            margin-bottom: 10%;
+        }
+        a{
+            text-decoration: none;
+            color: #ffffff90;
+            transition: all 0.2s;
+        }
+        a:hover{
+            color: red;
+        }
+        .info{
+            display: grid;
+        }
+        .links{
+            color: #ffffff90;
+            img{
+                width: 30px;
+                height: 30px;
+                transition: transform 0.2s;
+            }
+            img:hover{
+                transform: scale(1.07);
+                filter: sepia(3) hue-rotate(-70deg) saturate(1000);
+            }
+        }
+        .friends{
+            display: grid;
+        }
+    }
+}

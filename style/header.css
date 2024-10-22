@@ -1,0 +1,160 @@
+@font-face {
+  font-family: "PIXY bold";
+  src: url(/font/Pixy.ttf);
+}
+header {
+  top: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3137254902);
+  background-color: rgba(0, 0, 0, 0.9);
+  filter: blur(10%);
+  gap: 2%;
+}
+header .logo {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  transform-style: preserve-3d;
+  transition: 0.2s;
+}
+header .logo .name {
+  color: rgb(255, 255, 255);
+  font-family: "PIXY";
+  font-size: 25px;
+  transition: color 0.2s;
+}
+header .logo .name:hover {
+  color: rgb(255, 0, 0);
+}
+header .logo img {
+  width: 40px;
+  height: 40px;
+}
+header .logo:hover {
+  transform: scale(1.01);
+}
+header .containerForPages {
+  margin-right: 2.5%;
+}
+header .containerForPages .Pages {
+  width: max-content;
+  font-family: "PIXY";
+  display: flex;
+  text-align: center;
+  align-items: center;
+  gap: 3%;
+}
+header .containerForPages .Pages .line {
+  height: 15px;
+  border-left: 1px solid #ffffff;
+}
+header .containerForPages .Pages a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5647058824);
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+header .containerForPages .Pages a:hover {
+  color: red;
+}
+header .input-container {
+  position: relative;
+}
+header .input-container .input {
+  height: 30px;
+  border: 2px solid #ffffff;
+  background-color: rgba(255, 255, 255, 0.1254901961);
+  border-top: none;
+  border-bottom: none;
+  font-family: "PIXY";
+  font-size: 16px;
+  outline: none;
+  box-shadow: 7px 7px 0px 0px #ffffff;
+  transition: all 0.5s;
+}
+header .input-container .input:focus {
+  box-shadow: none;
+  transition: all 0.5s;
+}
+header .input-container .label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #ffffff;
+  transition: all 0.5s;
+  transform: scale(0);
+  z-index: -1;
+}
+header .input-container .topline {
+  position: absolute;
+  content: "";
+  background-color: #ffffff;
+  width: 0%;
+  height: 2px;
+  right: 0;
+  top: 0;
+  transition: all 0.5s;
+}
+header .input-container input[type=text]:focus ~ .topline {
+  width: 100%;
+  transition: all 0.5s;
+}
+header .input-container .underline {
+  position: absolute;
+  content: "";
+  background-color: #ffffff;
+  width: 0%;
+  height: 2px;
+  right: 0;
+  bottom: 0;
+  transition: all 0.5s;
+}
+header .input-container input[type=text]:focus ~ .underline {
+  width: 100%;
+  transition: all 0.5s;
+}
+header .input-container input[type=text]:focus ~ .underline input[type=text]:focus ~ .label {
+  top: -10px;
+  transform: scale(1);
+  transition: all 0.5s;
+}
+header .RegContainer #regBtn {
+  width: 120px;
+  height: 35px;
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: none;
+  font-family: "PIXY";
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+header .RegContainer #regBtn:hover {
+  color: rgb(255, 255, 255);
+}
+header .RegContainer #regBtn:after {
+  content: "";
+  background: rgb(0, 0, 0);
+  position: absolute;
+  z-index: -1;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.5s;
+}
+header .RegContainer #regBtn:hover:after {
+  transform: skewX(-45deg) scale(1, 1);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+/*# sourceMappingURL=header.css.map */
