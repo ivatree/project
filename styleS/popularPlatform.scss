@@ -1,0 +1,177 @@
+.MostPopularPlatform{
+    width: max-content;
+    height: max-content;
+    margin: 5%;
+    display: flex;
+    flex-flow: column;
+    justify-self: center;
+    font-family: 'PIXY';
+    .Title{
+        display: grid;
+        text-align: center;
+        align-items: center;
+        grid-template-columns: 95% 5%;
+        grid-template-rows: 40% 50%;
+        width: 100%;
+        height: 90px;
+        margin-bottom: 0.5%;
+        .TitleText{
+            display: flex;
+            align-items: center;
+            gap: 2%;
+            width: 100%;
+            h1{
+                font-family: 'PIXY';
+                color: #ffffff;
+                letter-spacing: 3px;
+            }
+            .NewGame{
+                color: #ffffff90;
+                font-family: 'PIXY';
+                transition: all 0.1s;
+            }
+            .NewGame:hover{
+                color: #ffffff;
+            }
+        }
+        .funcBtn{
+            grid-row: span 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20%;
+            .btn{
+                width: 30px;
+                height: 30px;
+                border: none;
+                color: #ffffff;
+                background-color: transparent;
+                font-weight: bold;
+                font-size: 20px;
+                cursor: pointer;
+                transition: all 0.2s;
+            }
+            .btn:hover{
+                color: red;
+            }
+        }
+        .PlatformList{
+            width: 97.5%;
+            font-family: 'PIXY';
+            .platforms{
+                padding: 0;
+                display: flex;
+                justify-content:flex-start;
+                list-style: none;
+                color: #ffffff;
+                gap: 3%;
+                border-top: 1px solid #ffffff;
+                li{
+                    padding-top: 1.5%;
+                    transition: all 0.2s;
+                    border-top: 2px solid #000000;
+
+                }
+                li:active{
+                    border-color: #ffffff;
+                    transition: all 0.2s;
+                }
+            }
+        }
+    }
+    .containerForGames{
+        width: 1200px;
+        display: flex;
+        flex-direction: row;
+        line-height: 0;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        .checkWidth{
+            gap: 1.6%;
+            display: flex;
+            .cards{
+                width: 500px;
+                gap: 3%;
+                font-family: 'PIXY';
+                display: grid;
+                grid-template-columns: 25% 50% 30%;
+                grid-template-rows: 40% 40% 25%;
+                .cardsCont{
+                    grid-row: 1 / 4;
+                    .card{
+                        display: flex;
+                        text-align: center;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100px;
+                        height: 150px;
+                        background-color: #ffffff;
+                    }
+                }
+                h2{
+                    display: flex;
+                    justify-content: center;
+                    color: white;
+                    font-size: 20px;
+                }
+                .GameScore{
+                    display: flex;
+                    gap: 2%;
+                    margin-bottom: 20%;
+                    justify-self: end;
+                    #Score{
+                        width: 60px;
+                        height: 60px;
+                        font-size: 30px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: green;
+                    }
+                    #review{
+                        color: #ffffff;
+                    }
+                }
+                .PlatformForCards{
+                    display: flex;
+                    align-items: center;
+                    .PlatformName{
+                        padding: 5%;
+                        padding-top: 0;
+                        padding-bottom: 0;
+                        font-size: 15px;
+                        width: auto;
+                        height: 55%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: white;
+                        background-color: transparent;
+                        border: 1px solid #ffffff;
+                    }
+                }
+                .universalAcclaim{
+                    display: flex;
+                    justify-content: end;
+                    align-items: center;
+                    .AcclaimText{
+                        color: #ffffff;
+                        
+                    }
+                }
+                .ScoreColorLine{
+                    display: flex;
+                    align-items: center;
+                    grid-column: 2 / 4;
+                    .ScoreLine{
+                        background-color: green;
+                        width: 100%;
+                        height: 15%;
+                    }
+                }
+            }  
+        }
+    }
+}

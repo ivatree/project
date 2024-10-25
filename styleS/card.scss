@@ -1,90 +1,110 @@
-main{
+.New, .Future{
     width: max-content;
     height: max-content;
     margin: 5%;
     display: flex;
     flex-flow: column;
     justify-self: center;
-    .New, .Top{
-        .Title{
+    .Title{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        width: 100%;
+        height: 60px;
+        gap: 1%;
+        .TitleText{
             display: flex;
-            align-items:flex-end;
-            gap: 1%;
-            justify-content: center;
+            align-items: center;
+            gap: 2%;
+            width: 93.5%;
+            height: 50px;
+            border-bottom: 1px solid #ffffff;
+            margin-bottom: 2%;
             h1{
-                padding-bottom: 1%;
-                width: 100%;
-                height: 20px;
-                line-height: 1%;
                 font-family: 'PIXY';
                 color: #ffffff;
-                border-bottom: 1px solid white;
+                letter-spacing: 3px;
+
             }
-            .funcBtn{
-                float: left;
-                height: 50px;
+            .NewGame{
+                color: #ffffff90;
+                font-family: 'PIXY';
+                transition: all 0.1s;
+            }
+            .NewGame:hover{
+                color: #ffffff;
+            }
+        }
+        .funcBtn{
+            float: right;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            gap: 20%;
+            align-items:flex-end;
+            .btn{
+                padding-top: 11%;
+                width: 30px;
+                height: 30px;
+                border: none;
+                color: #ffffff;
+                background-color: transparent;
+                font-weight: bold;
+                font-size: 20px;
+                cursor: pointer;
+                transition: all 0.2s;
+            }
+            .btn:hover{
+                color: red;
+            }
+        }
+    }
+    .containerForGame{
+        width: 1200px;
+        display: flex;
+        flex-direction: row;
+        line-height: 1%;
+        gap: 2.5%;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        .cards{
+            font-family: 'PIXY';
+            .card{
                 display: flex;
-                align-items: center;
                 text-align: center;
-                gap: 20%;
-                .btn{
-                    padding-top: 10%;
+                justify-content: center;
+                align-items: center;
+                width: 150px;
+                height: 225px;
+                background-color: white;
+            }
+            h2{
+                color: white;
+                font-size: 20px;
+            }
+            .GameScore{
+                display: flex;
+                text-align: center;
+                align-items: center;
+                gap: 2%;
+                margin-bottom: 20%;
+                #Score{
                     width: 30px;
                     height: 30px;
-                    border: none;
-                    color: #ffffff;
-                    background-color: transparent;
-                    font-weight: bold;
-                    font-size: 20px;
-                    cursor: pointer;
-                    transition: all 0.2s;
-                }
-                .btn:hover{
-                    color: red;
-                }
-            }
-        }
-        .containerForGame{
-            width: 20%;
-            display: flex;
-            gap: 2.5%;
-            line-height: 1%;
-            .cards{
-                font-family: 'PIXY';
-                .card{
+                    font-size: 18px;
                     display: flex;
+                    align-items: center;
                     text-align: center;
                     justify-content: center;
-                    align-items: center;
-                    width: 240px;
-                    height: 150px;
-                    background-color: white;
+                    background-color: green;
                 }
-                h2{
-                    color: white;
-                    font-size: 20px;
+                #review{
+                    color: #ffffff;
                 }
-                .GameScore{
-                    display: flex;
-                    text-align: center;
-                    align-items: center;
-                    gap: 2%;
-                    margin-bottom: 20%;
-                    #Score{
-                        width: 30px;
-                        height: 30px;
-                        font-size: 18px;
-                        display: flex;
-                        align-items: center;
-                        text-align: center;
-                        justify-content: center;
-                        background-color: green;
-                    }
-                    #review{
-                        color: #ffffff;
-                    }
-                }
-            }   
-        }
+            }
+        }  
     }
 }

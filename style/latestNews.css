@@ -1,0 +1,48 @@
+.LatestNews {
+  width: max-content;
+  height: max-content;
+  margin: 5%;
+  display: flex;
+  flex-flow: column;
+  justify-self: center;
+  font-family: "PIXY";
+  letter-spacing: 1.5px;
+}
+.LatestNews .LatestNewsHeader {
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid #ffffff;
+  margin-bottom: 3%;
+  color: #ffffff;
+  letter-spacing: 3px;
+}
+.LatestNews .LatestNewsContainer .NewsCardsContainer {
+  gap: 2%;
+  display: flex;
+}
+.LatestNews .LatestNewsContainer .NewsCardsContainer .NewsCard {
+  display: grid;
+  width: 200px;
+  height: 300px;
+  border-bottom: 1px solid #ffffff;
+}
+.LatestNews .LatestNewsContainer .NewsCardsContainer .NewsCard .NewsGamePicture {
+  background-color: aliceblue;
+  width: 180px;
+  height: 120px;
+}
+.LatestNews .LatestNewsContainer .NewsCardsContainer .NewsCard a {
+  font-size: 20px;
+  color: #ffffff;
+  transition: 0.2s;
+}
+.LatestNews .LatestNewsContainer .NewsCardsContainer .NewsCard a:hover {
+  color: red;
+  transition: 0.2s;
+}
+.LatestNews .LatestNewsContainer .NewsCardsContainer .NewsCard .NewsGameDescription {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+/*# sourceMappingURL=latestNews.css.map */

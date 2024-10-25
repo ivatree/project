@@ -18,7 +18,6 @@ header{
         display: flex;
         text-decoration: none;
         align-items: center;
-        transform-style: preserve-3d;
         transition: 0.2s;
         .name{
             color: rgb(255, 255, 255);
@@ -38,18 +37,14 @@ header{
         transform: scale(1.01);
     }
     .containerForPages{
-        margin-right: 2.5%;
+        margin: 2%;
         .Pages{
-            width: max-content;
             font-family: 'PIXY';
             display: flex;
             text-align: center;
             align-items: center;
-            gap: 3%;
-            .line{
-                height: 15px;
-                border-left: 1px solid #ffffff;
-            }
+            justify-content: center;
+            gap: 10%;
             a{
                 text-decoration: none;
                 color: #ffffff90;
@@ -58,6 +53,61 @@ header{
             }
             a:hover{
                 color: red;
+            }
+            .dropdown {
+                position: relative;
+                display: inline-block;
+                .dropdown-content {
+                    display: none;
+                    position: absolute;
+                    background-color: #1a1a1a;
+                    min-width: 450px;
+                    max-width: max-content;
+                    z-index: 1;
+                    text-align: left;
+                    box-shadow: 7px 7px 0px 0px #ffffff;
+                    border: 2px solid #ffffff;
+                    border-top: none;
+                    border-bottom: none;
+                    .FirstColumn, .SecondColumn{
+                        display: block;
+                        line-height: 15px;
+                        width: 40%;
+                        float: left;
+                        p{
+                            color: #ffffff90;
+                            margin: 10%;
+                            margin-bottom: 15%;
+                            font-size: 20px;
+                            cursor: default;
+                        }
+                        .platform, .Games{
+                            font-size: 15px;
+                            margin: 10%;
+                            display: block;
+                            color: white;
+                        }
+                        .platform:hover, .Games:hover{
+                            color: red;
+                            transform: translate3d(5px, 0px, 0px);                    }
+                            #allKat{
+                                color: #ffffff90;
+                                font-size: 13px;
+                            }
+                            #allKat:hover{
+                                color: #ffffff;
+                            }
+                        }
+                    }
+                    .FirstColumn {
+                        border-right: 1px solid #ffffff; 
+                    }
+                
+                }
+            .dropdown:hover{
+                .dropdown-content{
+                    display: block;
+                }
             }
         }
     }
@@ -73,20 +123,11 @@ header{
             font-size: 16px;
             outline: none;
             box-shadow: 7px 7px 0px 0px #ffffff;
-            transition: all 0.5s;
+            transition: all 0.3s;
         }
         .input:focus {
             box-shadow: none;
-            transition: all 0.5s;
-        }
-        .label {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            color: #ffffff;
-            transition: all 0.5s;
-            transform: scale(0);
-            z-index: -1;
+            transition: all 0.3s;
         }
         .topline {
             position: absolute;
@@ -96,11 +137,11 @@ header{
             height: 2px;
             right: 0;
             top: 0;
-            transition: all 0.5s;
+            transition: all 0.3s;
         }
         input[type="text"]:focus ~ .topline {
             width: 100%;
-            transition: all 0.5s;
+            transition: all 0.3s;
         }
         .underline {
             position: absolute;
@@ -110,22 +151,21 @@ header{
             height: 2px;
             right: 0;
             bottom: 0;
-            transition: all 0.5s;
+            transition: all 0.3s;
         }
         input[type="text"]:focus ~ .underline {
             width: 100%;
-            transition: all 0.5s;
+            transition: all 0.3s;
             
             input[type="text"]:focus ~ .label {
                 top: -10px;
                 transform: scale(1);
-                transition: all 0.5s;
+                transition: all 0.3s;
             }
         }
     }
     .RegContainer{
-        #regBtn{
-        // margin: 5%;
+        #openRegForm{
         width: 120px;
         height: 35px;
         background: rgb(255, 255, 255);
@@ -138,10 +178,10 @@ header{
         z-index: 1;
         overflow: hidden;
         }
-        #regBtn:hover {
+        #openRegForm:hover {
             color: rgb(255, 255, 255);
         }
-        #regBtn:after {
+        #openRegForm:after {
             content: "";
             background: rgb(0, 0, 0);
             position: absolute;
@@ -153,7 +193,7 @@ header{
             transform: skewX(-45deg) scale(0, 1);
             transition: all 0.5s;
         }
-        #regBtn:hover:after {
+        #openRegForm:hover:after {
             transform: skewX(-45deg) scale(1, 1);
             -webkit-transition: all 0.5s;
             transition: all 0.5s;

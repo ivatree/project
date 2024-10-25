@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>ИгроКритика</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/icon/logo.png" />
     <link rel="stylesheet" href="/style/header.css">
     <link rel="stylesheet" href="/style/footer.css">
     <link rel="stylesheet" href="/style/card.css">
+    <link rel="stylesheet" href="/style/reg.css">
+    <link rel="stylesheet" href="/style/authorization.css">
+    <link rel="stylesheet" href="/style/NewsWheel.css">
+    <link rel="stylesheet" href="/style/popularPlatform.css">
+    <link rel="stylesheet" href="/style/latestNews.css">
     <style>
         body{
             width: auto;
-            height: 100%;
             top: 0;
             bottom: 0;
             margin: 0;
@@ -28,40 +33,103 @@
         </a>
         <div class="containerForPages">
             <div class="Pages">
-                <a id="" href="#">Новости</a><p class="line"></p>
-                <a id="drop" href="#">Категории
-                    <!-- <section class="dropdown-content">
-                        <option><a href="#">PlayStation</a></option>
-                        <option><a href="#">Xbox</a></option>
-                        <option><a href="#">Xbox Pass</a></option>
-                        <option><a href="#">PC</a></option>
-                    </section> -->
-                </a><p class="line"></p>
-                <a id="" href="#">Ваш топ</a><p class="line"></p>
+                <a id="" href="#">Новости</a>
+                <div class="dropdown">
+                <a id="drop" href="#">Игры
+                    <div class="dropdown-content">
+                        <div class="FirstColumn">
+                            <p>Категории</p>
+                            <a class="platform" href="#">PlayStation</a>
+                            <a class="platform" href="#">Xbox</a>
+                            <a class="platform" href="#">Xbox Pass</a>
+                            <a class="platform" href="#">PC</a> 
+                            <a class="platform" href="#">Switch</a>
+                            <a class="platform" href="#">Мобильные</a>
+                            <a class="platform" id="allKat" href="#">ПОСМОТРЕТЬ ВСЕ</a>
+                        </div>
+                        <div class="SecondColumn">
+                            <p>Новые релизы</p>
+                            <a class="Games" href="#">Новые и грядущие игры</a>
+                            <a class="Games" href="#">Бесплатные игры</a>
+                            <a class="Games" href="#">Игры по подписке</a>
+                            <a class="Games" href="#">Silent Hill 2</a> 
+                            <a class="Games" href="#">Batman: Arkham Shadow</a>
+                            <a class="Games" href="#">Fear the Spotlight</a>
+                            <a class="Games" id="allKat" href="#">ПОСМОТРЕТЬ ВСЕ</a>
+                        </div>
+                    </div>
+                </div>
+                <a id="" href="#">Ваш топ</a>
                 <a id="" href="#">Календарь</a>
             </div>
         </div>
         <div class="input-container">
             <input class="input" name="text" type="text" placeholder="ПОИСК">
-            <label class="label" for="input">Название</label>
             <div class="topline"></div>
             <div class="underline"></div>
         </div>
         <div class="RegContainer">
-            <button id="regBtn">РЕГИСТРАЦИЯ</button>
+            <button id="openRegForm">РЕГИСТРАЦИЯ</button>
+            <div id="regForm" class="registrForm" style="display: none;">
+                <div class="regContent">
+                    <div class="regTable">
+                        <div class="regHeader">
+                            <p class="regText">РЕГИСТРАЦИЯ</p>
+                            <button class="close"></button>
+                        </div>
+                        <div class="selectedForm">
+                            <p class="registration">Региcтрация</p>
+                            <button class="switchBtn">Авторизация</button>
+                        </div>
+                        <div class="inputs">
+                            <input id="nickname" type="text" placeholder="Имя">
+                            <input id="Email" type="email" placeholder="E-mail">
+                            <input id="Pass" type="password" placeholder="Пароль">
+                        </div>
+                        <div class="regBtns">
+                            <button id="accept">Принять</button>
+                            <button class="cancel">Отмена</button>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div id="authForm" class="registrForm" style="display: none;">
+                <div class="authContent">
+                    <div class="authTable">
+                        <div class="authHeader">
+                            <p class="authText">Авторизация</p>
+                            <button class="close"></button>
+                        </div>
+                        <div class="selectedForm">
+                            <button class="switchBtn">Региcтрация</button>
+                            <p class="login">Авторизация</p>
+                        </div>
+                        <div class="inputs">
+                            <input id="email" type="email" placeholder="E-mail">
+                            <input id="pass" type="password" placeholder="Пароль">
+                        </div>
+                        <div class="regBtns">
+                            <button id="accept">Принять</button>
+                            <button class="cancel">Отмена</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
-    <main>
-        <div class="New">
+    <div class="New">
             <div class="Title">
-                <h1 class="TopGame">Новые релизы</h1>
+                <div class="TitleText">
+                    <h1 class="TopGame">Новые релизы</h1>
+                    <a class="NewGame" href="#">ПОСМОТРЕТЬ ВСЕ</a>
+                </div>
                 <div class="funcBtn">
                     <button class="btn" id="left">&#9668;</button>
                     <button class="btn" id="right">&#9658;</button>
                 </div>
             </div>
-            <div class="containerForGame">
-                <div class="cards">
+            <div id="container" class="containerForGame">
+                <div id="card" class="cards">
                     <div class="card">
                         <p>preview</p>
                     </div>
@@ -71,7 +139,7 @@
                         <p id="review">test text</p>
                     </div>
                 </div>
-                <div class="cards">
+                <div id="card" class="cards">
                     <div class="card">
                         <p>preview</p>
                     </div>
@@ -81,7 +149,7 @@
                         <p id="review">test text</p>
                     </div>
                 </div>
-                <div class="cards">
+                <div id="card" class="cards">
                     <div class="card">
                         <p>preview</p>
                     </div>
@@ -91,7 +159,7 @@
                         <p id="review">test text</p>
                     </div>
                 </div>
-                <div class="cards">
+                <div id="card" class="cards">
                     <div class="card">
                         <p>preview</p>
                     </div>
@@ -101,7 +169,7 @@
                         <p id="review">test text</p>
                     </div>
                 </div>
-                <div class="cards">
+                <div id="card" class="cards">
                     <div class="card">
                         <p>preview</p>
                     </div>
@@ -111,18 +179,71 @@
                         <p id="review">test text</p>
                     </div>
                 </div>
+                <div id="card" class="cards">
+                    <div class="card">
+                        <p>preview</p>
+                    </div>
+                    <h2 class="gameName">Name</h2>
+                    <div class="GameScore">
+                        <div id="Score" aria-label="score">100</div>
+                        <p id="review">test text</p>
+                    </div>
+                </div>
+                <div id="card" class="cards">
+                    <div class="card">
+                        <p>preview</p>
+                    </div>
+                    <h2 class="gameName">Name</h2>
+                    <div class="GameScore">
+                        <div id="Score" aria-label="score">100</div>
+                        <p id="review">test text</p>
+                    </div>
+                </div>
+                <div id="card" class="cards">
+                    <div class="card">
+                        <p>preview</p>
+                    </div>
+                    <h2 class="gameName">Name</h2>
+                    <div class="GameScore">
+                        <div id="Score" aria-label="score">100</div>
+                        <p id="review">test text</p>
+                    </div>
+                </div>
+                <div id="card" class="cards">
+                    <div class="card">
+                        <p>preview</p>
+                    </div>
+                    <h2 class="gameName">Name</h2>
+                    <div class="GameScore">
+                        <div id="Score" aria-label="score">100</div>
+                        <p id="review">test text</p>
+                    </div>
+                </div>
+                <div id="card" class="cards">
+                    <div class="card">
+                        <p>preview</p>
+                    </div>
+                    <h2 class="gameName">Name</h2>
+                    <div class="GameScore">
+                        <div id="Score" aria-label="score">100</div>
+                        <p id="review">test text</p>
+                    </div>
+                </div>
+                <div class="overlay"></div>
             </div>
-        </div>
-        <div class="Top">
+    </div>
+    <div class="Future">
             <div class="Title">
-                <h1 class="TopGame">Топ рейтинга</h1>
+                <div class="TitleText">
+                    <h1 class="TopGame">грядущие игры</h1>
+                </div>
                 <div class="funcBtn">
-                    <button class="btn" id="left">&#9668;</button>
-                    <button class="btn" id="right">&#9658;</button>
+                    <button class="btn" id="Left">&#9668;</button>
+                    <button class="btn" id="Right">&#9658;</button>
                 </div>
             </div>
-            <div class="containerForGame">
-                <div class="cards">
+            <div id="Container" class="containerForGame">
+                <div id="card" class="cards">
                     <div class="card">
                         <p>preview</p>
                     </div>
@@ -132,7 +253,7 @@
                         <p id="review">test text</p>
                     </div>
                 </div>
-                <div class="cards">
+                <div id="card" class="cards">
                     <div class="card">
                         <p>preview</p>
                     </div>
@@ -142,7 +263,7 @@
                         <p id="review">test text</p>
                     </div>
                 </div>
-                <div class="cards">
+                <div id="card" class="cards">
                     <div class="card">
                         <p>preview</p>
                     </div>
@@ -152,7 +273,7 @@
                         <p id="review">test text</p>
                     </div>
                 </div>
-                <div class="cards">
+                <div id="card" class="cards">
                     <div class="card">
                         <p>preview</p>
                     </div>
@@ -162,7 +283,7 @@
                         <p id="review">test text</p>
                     </div>
                 </div>
-                <div class="cards">
+                <div id="card" class="cards">
                     <div class="card">
                         <p>preview</p>
                     </div>
@@ -170,11 +291,399 @@
                     <div class="GameScore">
                         <div id="Score" aria-label="score">100</div>
                         <p id="review">test text</p>
+                    </div>
+                </div>
+                <div id="card" class="cards">
+                    <div class="card">
+                        <p>preview</p>
+                    </div>
+                    <h2 class="gameName">Name</h2>
+                    <div class="GameScore">
+                        <div id="Score" aria-label="score">100</div>
+                        <p id="review">test text</p>
+                    </div>
+                </div>
+                <div id="card" class="cards">
+                    <div class="card">
+                        <p>preview</p>
+                    </div>
+                    <h2 class="gameName">Name</h2>
+                    <div class="GameScore">
+                        <div id="Score" aria-label="score">100</div>
+                        <p id="review">test text</p>
+                    </div>
+                </div>
+                <div id="card" class="cards">
+                    <div class="card">
+                        <p>preview</p>
+                    </div>
+                    <h2 class="gameName">Name</h2>
+                    <div class="GameScore">
+                        <div id="Score" aria-label="score">100</div>
+                        <p id="review">test text</p>
+                    </div>
+                </div>
+                <div id="card" class="cards">
+                    <div class="card">
+                        <p>preview</p>
+                    </div>
+                    <h2 class="gameName">Name</h2>
+                    <div class="GameScore">
+                        <div id="Score" aria-label="score">100</div>
+                        <p id="review">test text</p>
+                    </div>
+                </div>
+                <div id="card" class="cards">
+                    <div class="card">
+                        <p>preview</p>
+                    </div>
+                    <h2 class="gameName">Name</h2>
+                    <div class="GameScore">
+                        <div id="Score" aria-label="score">100</div>
+                        <p id="review">test text</p>
+                    </div>
+                </div>
+                <div class="overlay"></div>
+            </div>
+    </div>
+    <div class="NewsPicture">
+        <!-- изображение -->
+        <div class="NewsInfo">
+            <div class="logo">
+                <p class="name"><img src="/icon/logo.png" alt="logo">ИгроКритика</p>
+                <span class="NewsText">Игры на грани:<br> анализируем,<br> критикуем,<br> обсуждаем!</span>
+            </div>
+            <div class="contWithInfo">
+                <div class="InfTitile">
+                    <p class="infTitle">Метод оценивания</p>
+                </div>
+                <div class="color-line">
+                    <div class="green"></div>
+                    <div class="yellow"></div>
+                    <div class="red"></div>
+                </div>
+                <ul class="spis">
+                    <li class="method">Мы собираем отзывы от топовых мировых критиков.</li>
+                    <li class="method">Каждый отзыв оценивается на основе его общего качества.</li>
+                    <li class="method">Суммированное средневзвешенное значение отражает суть критического мнения.</li>
+                </ul>
+                <div class="MoreInfoBtn">
+                    <button class="MoreInfo">подробнее</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="MostPopularPlatform">
+        <div class="Title">
+            <div class="TitleText">
+                <h1 class="TopGame">Лучшие игры на</h1>
+                <a class="NewGame" href="#">ПОСМОТРЕТЬ ВСЕ</a>
+            </div>
+            <div class="funcBtn">
+                <button class="btn" id="LeftP">&#9668;</button>
+                <button class="btn" id="RightP">&#9658;</button>
+            </div>
+            <div class="PlatformList">
+                <ul class="platforms">
+                    <li>PS5</li>
+                    <li>ПК</li>
+                    <li>Nintendo Switch</li>
+                    <li>PS4</li>
+                    <li>Xbox One</li>
+                    <li>Xbox Series X</li>
+                </ul>
+            </div>
+        </div>
+        <div id="ContainerP" class="containerForGames">
+            <div class="checkWidth">
+                <div id="card" class="cards">
+                    <div class="cardsCont">
+                        <div class="card">
+                            <img src="#">
+                            <p>preview</p>
+                        </div>
+                    </div>
+                    <h2 class="gameName">1. Baldur's Gate 3</h2>
+                    <div class="GameScore">
+                        <div id="Score" aria-label="score">100</div>
+                    </div>
+                    <div class="PlatformForCards">
+                        <span class="PlatformName">PS5</span>
+                    </div>
+                    <div class="universalAcclaim">
+                        <span class="AcclaimText">Общая оценка</span>
+                    </div>
+                    <div class="ScoreColorLine">
+                        <div class="ScoreLine"></div>
+                    </div>
+                </div>
+                <div id="card" class="cards">
+                    <div class="cardsCont">
+                        <div class="card">
+                            <img src="#">
+                            <p>preview</p>
+                        </div>
+                    </div>
+                    <h2 class="gameName">1. Baldur's Gate 3</h2>
+                    <div class="GameScore">
+                        <div id="Score" aria-label="score">100</div>
+                    </div>
+                    <div class="PlatformForCards">
+                        <span class="PlatformName">PS5</span>
+                    </div>
+                    <div class="universalAcclaim">
+                        <span class="AcclaimText">Общая оценка</span>
+                    </div>
+                    <div class="ScoreColorLine">
+                        <div class="ScoreLine"></div>
+                    </div>
+                </div>
+                <div id="card" class="cards">
+                    <div class="cardsCont">
+                        <div class="card">
+                            <img src="#">
+                            <p>preview</p>
+                        </div>
+                    </div>
+                    <h2 class="gameName">1. Baldur's Gate 3</h2>
+                    <div class="GameScore">
+                        <div id="Score" aria-label="score">100</div>
+                    </div>
+                    <div class="PlatformForCards">
+                        <span class="PlatformName">PS5</span>
+                    </div>
+                    <div class="universalAcclaim">
+                        <span class="AcclaimText">Общая оценка</span>
+                    </div>
+                    <div class="ScoreColorLine">
+                        <div class="ScoreLine"></div>
+                    </div>
+                </div>
+                <div id="card" class="cards">
+                    <div class="cardsCont">
+                        <div class="card">
+                            <img src="#">
+                            <p>preview</p>
+                        </div>
+                    </div>
+                    <h2 class="gameName">1. Baldur's Gate 3</h2>
+                    <div class="GameScore">
+                        <div id="Score" aria-label="score">100</div>
+                    </div>
+                    <div class="PlatformForCards">
+                        <span class="PlatformName">PS5</span>
+                    </div>
+                    <div class="universalAcclaim">
+                        <span class="AcclaimText">Общая оценка</span>
+                    </div>
+                    <div class="ScoreColorLine">
+                        <div class="ScoreLine"></div>
+                    </div>
+                </div>
+                <div id="card" class="cards">
+                    <div class="cardsCont">
+                        <div class="card">
+                            <img src="#">
+                            <p>preview</p>
+                        </div>
+                    </div>
+                    <h2 class="gameName">1. Baldur's Gate 3</h2>
+                    <div class="GameScore">
+                        <div id="Score" aria-label="score">100</div>
+                    </div>
+                    <div class="PlatformForCards">
+                        <span class="PlatformName">PS5</span>
+                    </div>
+                    <div class="universalAcclaim">
+                        <span class="AcclaimText">Общая оценка</span>
+                    </div>
+                    <div class="ScoreColorLine">
+                        <div class="ScoreLine"></div>
+                    </div>
+                </div>
+                <div id="card" class="cards">
+                    <div class="cardsCont">
+                        <div class="card">
+                            <img src="#">
+                            <p>preview</p>
+                        </div>
+                    </div>
+                    <h2 class="gameName">1. Baldur's Gate 3</h2>
+                    <div class="GameScore">
+                        <div id="Score" aria-label="score">100</div>
+                    </div>
+                    <div class="PlatformForCards">
+                        <span class="PlatformName">PS5</span>
+                    </div>
+                    <div class="universalAcclaim">
+                        <span class="AcclaimText">Общая оценка</span>
+                    </div>
+                    <div class="ScoreColorLine">
+                        <div class="ScoreLine"></div>
+                    </div>
+                </div>
+                <div id="card" class="cards">
+                    <div class="cardsCont">
+                        <div class="card">
+                            <img src="#">
+                            <p>preview</p>
+                        </div>
+                    </div>
+                    <h2 class="gameName">1. Baldur's Gate 3</h2>
+                    <div class="GameScore">
+                        <div id="Score" aria-label="score">100</div>
+                    </div>
+                    <div class="PlatformForCards">
+                        <span class="PlatformName">PS5</span>
+                    </div>
+                    <div class="universalAcclaim">
+                        <span class="AcclaimText">Общая оценка</span>
+                    </div>
+                    <div class="ScoreColorLine">
+                        <div class="ScoreLine"></div>
+                    </div>
+                </div>
+                <div id="card" class="cards">
+                    <div class="cardsCont">
+                        <div class="card">
+                            <img src="#">
+                            <p>preview</p>
+                        </div>
+                    </div>
+                    <h2 class="gameName">1. Baldur's Gate 3</h2>
+                    <div class="GameScore">
+                        <div id="Score" aria-label="score">100</div>
+                    </div>
+                    <div class="PlatformForCards">
+                        <span class="PlatformName">PS5</span>
+                    </div>
+                    <div class="universalAcclaim">
+                        <span class="AcclaimText">Общая оценка</span>
+                    </div>
+                    <div class="ScoreColorLine">
+                        <div class="ScoreLine"></div>
+                    </div>
+                </div>
+                <div id="card" class="cards">
+                    <div class="cardsCont">
+                        <div class="card">
+                            <img src="#">
+                            <p>preview</p>
+                        </div>
+                    </div>
+                    <h2 class="gameName">1. Baldur's Gate 3</h2>
+                    <div class="GameScore">
+                        <div id="Score" aria-label="score">100</div>
+                    </div>
+                    <div class="PlatformForCards">
+                        <span class="PlatformName">PS5</span>
+                    </div>
+                    <div class="universalAcclaim">
+                        <span class="AcclaimText">Общая оценка</span>
+                    </div>
+                    <div class="ScoreColorLine">
+                        <div class="ScoreLine"></div>
+                    </div>
+                </div>
+                <div id="card" class="cards">
+                    <div class="cardsCont">
+                        <div class="card">
+                            <img src="#">
+                            <p>preview</p>
+                        </div>
+                    </div>
+                    <h2 class="gameName">1. Baldur's Gate 3</h2>
+                    <div class="GameScore">
+                        <div id="Score" aria-label="score">100</div>
+                    </div>
+                    <div class="PlatformForCards">
+                        <span class="PlatformName">PS5</span>
+                    </div>
+                    <div class="universalAcclaim">
+                        <span class="AcclaimText">Общая оценка</span>
+                    </div>
+                    <div class="ScoreColorLine">
+                        <div class="ScoreLine"></div>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
+    </div>
+    <div class="LatestNews">
+        <div class="LatestNewsHeader">
+            <h1 class="NewsTitle">Последние новости из мира игр</h1>
+        </div>
+        <div class="LatestNewsContainer">
+            <div class="NewsCardsContainer">
+                <div class="NewsCard">
+                    <div class="NewsGamePicture">
+                        <img>
+                    </div>
+                    <div class="NewsGameTitle">
+                        <a class="gameText" href="#">asdsa</a>
+                    </div>
+                    <div class="NewsGameDescription">
+                        <span>Описание какой-то там игры бла-бла-бла</span>
+                    </div>
+                </div>
+                <div class="NewsCard">
+                    <div class="NewsGamePicture">
+                        <img>
+                    </div>
+                    <div class="NewsGameTitle">
+                        <a class="gameText" href="#">asdsa</a>
+                    </div>
+                    <div class="NewsGameDescription">
+                        <span>Описание какой-то там игры бла-бла-бла</span>
+                    </div>
+                </div>
+                <div class="NewsCard">
+                    <div class="NewsGamePicture">
+                        <img>
+                    </div>
+                    <div class="NewsGameTitle">
+                        <a class="gameText" href="#">asdsa</a>
+                    </div>
+                    <div class="NewsGameDescription">
+                        <span>Описание какой-то там игры бла-бла-бла</span>
+                    </div>
+                </div>
+                <div class="NewsCard">
+                    <div class="NewsGamePicture">
+                        <img>
+                    </div>
+                    <div class="NewsGameTitle">
+                        <a class="gameText" href="#">asdsa</a>
+                    </div>
+                    <div class="NewsGameDescription">
+                        <span>Описание какой-то там игры бла-бла-бла</span>
+                    </div>
+                </div>
+                <div class="NewsCard">
+                    <div class="NewsGamePicture">
+                        <img>
+                    </div>
+                    <div class="NewsGameTitle">
+                        <a class="gameText" href="#">asdsa</a>
+                    </div>
+                    <div class="NewsGameDescription">
+                        <span>Описание какой-то там игры бла-бла-бла</span>
+                    </div>
+                </div>
+                <div class="NewsCard">
+                    <div class="NewsGamePicture">
+                        <img>
+                    </div>
+                    <div class="NewsGameTitle">
+                        <a class="gameText" href="#">asdsa</a>
+                    </div>
+                    <div class="NewsGameDescription">
+                        <span>Описание какой-то там игры бла-бла-бла</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <footer>
         <a class="logo" href="#">
             <img src="/icon/logo.png" alt="logo">
@@ -208,5 +717,18 @@
             </div>
         </div>
     </footer>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#container").smoothDivScroll({
+                scrollingHotSpotLeftClass: "scrollingHotSpotLeft",
+                scrollingHotSpotRightClass: "scrollingHotSpotRight",
+                hotSpotScrolling: true,
+                touchScrolling: true,
+            });
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="/script/move.js"></script>
+    <script src="/script/regBtn.js"></script>
 </body>
 </html>

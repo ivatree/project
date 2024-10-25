@@ -66,6 +66,7 @@ footer .containerForInfo .links img {
 }
 footer .containerForInfo .links img:hover {
   transform: scale(1.07);
+  transition: transform 0.2s;
   filter: sepia(3) hue-rotate(-70deg) saturate(1000);
 }
 footer .containerForInfo .friends {
