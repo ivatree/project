@@ -17,7 +17,6 @@ header{
     .logo{
         display: flex;
         text-decoration: none;
-        align-items: center;
         transition: 0.2s;
         .name{
             color: rgb(255, 255, 255);
@@ -33,18 +32,14 @@ header{
             height: 40px;
         }
     }
-    .logo:hover{
-        transform: scale(1.01);
     }
     .containerForPages{
         margin: 2%;
-        .Pages{
             font-family: 'PIXY';
             display: flex;
             text-align: center;
             align-items: center;
             justify-content: center;
-            gap: 10%;
             a{
                 text-decoration: none;
                 color: #ffffff90;
@@ -58,7 +53,6 @@ header{
                 position: relative;
                 display: inline-block;
                 .dropdown-content {
-                    display: none;
                     position: absolute;
                     background-color: #1a1a1a;
                     min-width: 450px;
@@ -76,14 +70,11 @@ header{
                         float: left;
                         p{
                             color: #ffffff90;
-                            margin: 10%;
-                            margin-bottom: 15%;
                             font-size: 20px;
                             cursor: default;
                         }
                         .platform, .Games{
                             font-size: 15px;
-                            margin: 10%;
                             display: block;
                             color: white;
                         }
@@ -99,17 +90,8 @@ header{
                             }
                         }
                     }
-                    .FirstColumn {
-                        border-right: 1px solid #ffffff; 
-                    }
-                
-                }
-            .dropdown:hover{
-                .dropdown-content{
-                    display: block;
                 }
             }
-        }
     }
     .input-container {
         position: relative;
@@ -128,6 +110,20 @@ header{
         .input:focus {
             box-shadow: none;
             transition: all 0.3s;
+            }
+            &:focus ~ .topline {
+                width: 100%;
+                transition: all 0.3s;
+            }
+            &:focus ~ .underline {
+                width: 100%;
+                transition: all 0.3s;
+                input:focus ~ .label {
+                    top: -10px;
+                    transform: scale(1);
+                    transition: all 0.3s;
+                }
+            }
         }
         .topline {
             position: absolute;
@@ -139,10 +135,6 @@ header{
             top: 0;
             transition: all 0.3s;
         }
-        input[type="text"]:focus ~ .topline {
-            width: 100%;
-            transition: all 0.3s;
-        }
         .underline {
             position: absolute;
             content: "";
@@ -152,16 +144,6 @@ header{
             right: 0;
             bottom: 0;
             transition: all 0.3s;
-        }
-        input[type="text"]:focus ~ .underline {
-            width: 100%;
-            transition: all 0.3s;
-            
-            input[type="text"]:focus ~ .label {
-                top: -10px;
-                transform: scale(1);
-                transition: all 0.3s;
-            }
         }
     }
     .RegContainer{

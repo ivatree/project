@@ -63,8 +63,6 @@
                 display: flex;
                 justify-content:flex-start;
                 list-style: none;
-                color: #ffffff;
-                gap: 3%;
                 border-top: 1px solid #ffffff;
                 li{
                     padding-top: 1.5%;
@@ -82,29 +80,20 @@
     .containerForGames{
         width: 1200px;
         display: flex;
-        flex-direction: row;
         line-height: 0;
         overflow-x: scroll;
         overflow-y: hidden;
         scroll-behavior: smooth;
         scrollbar-width: none;
         .checkWidth{
-            gap: 1.6%;
             display: flex;
             .cards{
-                width: 500px;
-                gap: 3%;
                 font-family: 'PIXY';
                 display: grid;
                 grid-template-columns: 25% 50% 30%;
                 grid-template-rows: 40% 40% 25%;
                 .cardsCont{
                     grid-row: 1 / 4;
-                    .card{
-                        display: flex;
-                        text-align: center;
-                        justify-content: center;
-                        align-items: center;
                         width: 100px;
                         height: 150px;
                         background-color: #ffffff;

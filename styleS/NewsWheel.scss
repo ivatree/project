@@ -1,5 +1,4 @@
 .NewsPicture{
-    width: 100%;
     height: 360px;
     background-color: rgb(85, 85, 85);
     display: flex;
@@ -9,9 +8,7 @@
     border-bottom: 1px solid #ffffff;
     .NewsInfo{
         display: flex;
-        width: 65%;
         justify-content: center;
-        gap: 45%;
         .logo{
             font-family: 'PIXY';
             font-size: 30px;
