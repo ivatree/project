@@ -1,22 +1,46 @@
 .NewsPicture {
-  width: 100%;
   height: 360px;
-  background-color: rgb(85, 85, 85);
+  background-color: #0c0c0c;
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 2%;
   border-top: 1px solid #ffffff;
   border-bottom: 1px solid #ffffff;
+  background-image: url("/icon/backimg.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .NewsPicture .NewsInfo {
   display: flex;
-  width: 65%;
   justify-content: center;
-  gap: 45%;
+  gap: 25%;
+}
+@media (max-width: 767px) {
+  .NewsPicture .NewsInfo {
+    width: 300px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .NewsPicture .NewsInfo {
+    width: 800px;
+  }
+}
+@media (min-width: 991px) and (max-width: 1199px) {
+  .NewsPicture .NewsInfo {
+    width: 1000px;
+  }
+}
+@media (min-width: 1200px) {
+  .NewsPicture .NewsInfo {
+    width: 100%;
+  }
 }
 .NewsPicture .NewsInfo .logo {
   font-family: "PIXY";
-  font-size: 30px;
+  font-size: 40px;
+  color: #ffffff;
 }
 .NewsPicture .NewsInfo .logo p {
   display: flex;
@@ -41,6 +65,12 @@
   color: #000000;
   font-family: "PIXY";
   line-height: 100%;
+}
+@media (max-width: 767px) {
+  .NewsPicture .NewsInfo .contWithInfo {
+    padding: 20px;
+    font-size: 15px;
+  }
 }
 .NewsPicture .NewsInfo .contWithInfo .infTitle {
   text-align: center;

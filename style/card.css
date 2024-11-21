@@ -64,37 +64,69 @@
   width: 1200px;
   display: flex;
   flex-direction: row;
-  line-height: 1%;
-  gap: 2.5%;
   overflow-x: scroll;
   overflow-y: hidden;
   scroll-behavior: smooth;
   scrollbar-width: none;
 }
-.New .containerForGame .cards, .Future .containerForGame .cards {
+@media (max-width: 767px) {
+  .New .containerForGame, .Future .containerForGame {
+    width: 500px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .New .containerForGame, .Future .containerForGame {
+    width: 800px;
+  }
+}
+@media (min-width: 991px) and (max-width: 1199px) {
+  .New .containerForGame, .Future .containerForGame {
+    width: 1000px;
+  }
+}
+@media (min-width: 1200px) {
+  .New .containerForGame, .Future .containerForGame {
+    width: 1200px;
+  }
+}
+.New .containerForGame .card, .Future .containerForGame .card {
   font-family: "PIXY";
-}
-.New .containerForGame .cards .card, .Future .containerForGame .cards .card {
-  display: flex;
-  text-align: center;
-  justify-content: center;
+  display: grid;
+  grid-template-rows: 75% 15% 10%;
+  width: 160px;
+  height: 300px;
   align-items: center;
-  width: 150px;
+  text-decoration: none;
+  padding: 10px;
+}
+.New .containerForGame .card:hover, .Future .containerForGame .card:hover {
+  background-color: rgba(255, 255, 255, 0.062745098);
+}
+.New .containerForGame .card:hover h2, .Future .containerForGame .card:hover h2 {
+  color: red;
+  transition: all 0.2s;
+}
+.New .containerForGame .card img, .Future .containerForGame .card img {
+  width: 160px;
   height: 225px;
-  background-color: white;
+  grid-row: 1;
 }
-.New .containerForGame .cards h2, .Future .containerForGame .cards h2 {
-  color: white;
-  font-size: 20px;
+.New .containerForGame .card h2, .Future .containerForGame .card h2 {
+  color: #ffffff;
+  font-size: 18px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  grid-row: 2;
+  transition: all 0.2s;
 }
-.New .containerForGame .cards .GameScore, .Future .containerForGame .cards .GameScore {
+.New .containerForGame .card .GameScore, .Future .containerForGame .card .GameScore {
   display: flex;
-  text-align: center;
   align-items: center;
-  gap: 2%;
-  margin-bottom: 20%;
+  grid-row: 3;
+  text-decoration: none;
 }
-.New .containerForGame .cards .GameScore #Score, .Future .containerForGame .cards .GameScore #Score {
+.New .containerForGame .card .GameScore #Score, .Future .containerForGame .card .GameScore #Score {
   width: 30px;
   height: 30px;
   font-size: 18px;
@@ -102,10 +134,12 @@
   align-items: center;
   text-align: center;
   justify-content: center;
-  background-color: green;
+  color: #000000;
+  margin-right: 5px;
 }
-.New .containerForGame .cards .GameScore #review, .Future .containerForGame .cards .GameScore #review {
+.New .containerForGame .card .GameScore #review, .Future .containerForGame .card .GameScore #review {
   color: #ffffff;
+  font-size: 12px;
 }
 
 /*# sourceMappingURL=card.css.map */

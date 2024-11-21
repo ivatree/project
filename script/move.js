@@ -29,14 +29,14 @@ document.getElementById("Right").addEventListener("click", () => {
 document.getElementById("LeftP").addEventListener("click", () => {
   const container = document.getElementById("ContainerP");
   container.scrollBy({
-    left: -508,
+    left: -1220,
     behavior: "smooth",
   });
 });
 document.getElementById("RightP").addEventListener("click", () => {
   const container = document.getElementById("ContainerP");
   container.scrollBy({
-    left: 508,
+    left: 1220,
     behavior: "smooth",
   });
 });
