@@ -1,4 +1,4 @@
-main {
+.New, .Future {
   width: max-content;
   height: max-content;
   margin: 5%;
@@ -6,31 +6,47 @@ main {
   flex-flow: column;
   justify-self: center;
 }
-main .New .Title, main .Top .Title {
+.New .Title, .Future .Title {
   display: flex;
-  align-items: flex-end;
-  gap: 1%;
-  justify-content: center;
-}
-main .New .Title h1, main .Top .Title h1 {
-  padding-bottom: 1%;
+  text-align: center;
+  align-items: center;
   width: 100%;
-  height: 20px;
-  line-height: 1%;
+  height: 60px;
+  gap: 1%;
+}
+.New .Title .TitleText, .Future .Title .TitleText {
+  display: flex;
+  align-items: center;
+  gap: 2%;
+  width: 93.5%;
+  height: 50px;
+  border-bottom: 1px solid #ffffff;
+  margin-bottom: 2%;
+}
+.New .Title .TitleText h1, .Future .Title .TitleText h1 {
   font-family: "PIXY";
   color: #ffffff;
-  border-bottom: 1px solid white;
+  letter-spacing: 3px;
 }
-main .New .Title .funcBtn, main .Top .Title .funcBtn {
-  float: left;
+.New .Title .TitleText .NewGame, .Future .Title .TitleText .NewGame {
+  color: rgba(255, 255, 255, 0.5647058824);
+  font-family: "PIXY";
+  transition: all 0.1s;
+}
+.New .Title .TitleText .NewGame:hover, .Future .Title .TitleText .NewGame:hover {
+  color: #ffffff;
+}
+.New .Title .funcBtn, .Future .Title .funcBtn {
+  float: right;
   height: 50px;
   display: flex;
   align-items: center;
   text-align: center;
   gap: 20%;
+  align-items: flex-end;
 }
-main .New .Title .funcBtn .btn, main .Top .Title .funcBtn .btn {
-  padding-top: 10%;
+.New .Title .funcBtn .btn, .Future .Title .funcBtn .btn {
+  padding-top: 11%;
   width: 30px;
   height: 30px;
   border: none;
@@ -41,39 +57,76 @@ main .New .Title .funcBtn .btn, main .Top .Title .funcBtn .btn {
   cursor: pointer;
   transition: all 0.2s;
 }
-main .New .Title .funcBtn .btn:hover, main .Top .Title .funcBtn .btn:hover {
+.New .Title .funcBtn .btn:hover, .Future .Title .funcBtn .btn:hover {
   color: red;
 }
-main .New .containerForGame, main .Top .containerForGame {
-  width: 20%;
+.New .containerForGame, .Future .containerForGame {
+  width: 1200px;
   display: flex;
-  gap: 2.5%;
-  line-height: 1%;
+  flex-direction: row;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
 }
-main .New .containerForGame .cards, main .Top .containerForGame .cards {
+@media (max-width: 767px) {
+  .New .containerForGame, .Future .containerForGame {
+    width: 500px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .New .containerForGame, .Future .containerForGame {
+    width: 800px;
+  }
+}
+@media (min-width: 991px) and (max-width: 1199px) {
+  .New .containerForGame, .Future .containerForGame {
+    width: 1000px;
+  }
+}
+@media (min-width: 1200px) {
+  .New .containerForGame, .Future .containerForGame {
+    width: 1200px;
+  }
+}
+.New .containerForGame .card, .Future .containerForGame .card {
   font-family: "PIXY";
-}
-main .New .containerForGame .cards .card, main .Top .containerForGame .cards .card {
-  display: flex;
-  text-align: center;
-  justify-content: center;
+  display: grid;
+  grid-template-rows: 75% 15% 10%;
+  width: 160px;
+  height: 300px;
   align-items: center;
-  width: 240px;
-  height: 150px;
-  background-color: white;
+  text-decoration: none;
+  padding: 10px;
 }
-main .New .containerForGame .cards h2, main .Top .containerForGame .cards h2 {
-  color: white;
-  font-size: 20px;
+.New .containerForGame .card:hover, .Future .containerForGame .card:hover {
+  background-color: rgba(255, 255, 255, 0.062745098);
 }
-main .New .containerForGame .cards .GameScore, main .Top .containerForGame .cards .GameScore {
+.New .containerForGame .card:hover h2, .Future .containerForGame .card:hover h2 {
+  color: red;
+  transition: all 0.2s;
+}
+.New .containerForGame .card img, .Future .containerForGame .card img {
+  width: 160px;
+  height: 225px;
+  grid-row: 1;
+}
+.New .containerForGame .card h2, .Future .containerForGame .card h2 {
+  color: #ffffff;
+  font-size: 18px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  grid-row: 2;
+  transition: all 0.2s;
+}
+.New .containerForGame .card .GameScore, .Future .containerForGame .card .GameScore {
   display: flex;
-  text-align: center;
   align-items: center;
-  gap: 2%;
-  margin-bottom: 20%;
+  grid-row: 3;
+  text-decoration: none;
 }
-main .New .containerForGame .cards .GameScore #Score, main .Top .containerForGame .cards .GameScore #Score {
+.New .containerForGame .card .GameScore #Score, .Future .containerForGame .card .GameScore #Score {
   width: 30px;
   height: 30px;
   font-size: 18px;
@@ -81,10 +134,12 @@ main .New .containerForGame .cards .GameScore #Score, main .Top .containerForGam
   align-items: center;
   text-align: center;
   justify-content: center;
-  background-color: green;
+  color: #000000;
+  margin-right: 5px;
 }
-main .New .containerForGame .cards .GameScore #review, main .Top .containerForGame .cards .GameScore #review {
+.New .containerForGame .card .GameScore #review, .Future .containerForGame .card .GameScore #review {
   color: #ffffff;
+  font-size: 12px;
 }
 
 /*# sourceMappingURL=card.css.map */
